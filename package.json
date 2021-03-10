@@ -1,6 +1,6 @@
 {
   "name": "pm-core-js-lib",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "directories": {
@@ -33,14 +33,19 @@
     "@babel/polyfill": "7.8.3",
     "@babel/preset-env": "7.9.0",
     "@babel/runtime": "7.8.4",
+    "@node-minify/babel-minify": "6.2.0",
+    "@node-minify/core": "6.2.0",
+    "babel-minify": "^0.5.1",
     "cheerio": "1.0.0-rc.3",
     "date-and-time": "0.6.2",
     "fs-extra": "8.1.0",
     "jquery": "3.6.0",
     "klaw-sync": "6.0.0",
+    "node-minify": "3.6.0",
     "node-sass": "5.0.0",
     "postcss": "8.2.8",
     "shelljs": "0.8.4",
+    "source-map": "^0.7.3",
     "terser-webpack-plugin": "5.1.1",
     "webpack": "4.41.5",
     "yargs": "11.0.0"

@@ -5,8 +5,10 @@ const date = require('date-and-time');
 const path = require('path');
 const ignoreFolders = require('./config/ignoreFolders');
 const info = require('./../package.json');
-const {DIST_FOLDER, DIST_FOLDER_LIB, MAIN_FOLDER} = require('./config/constants');
+const {ROOT_FOLDER, DIST_FOLDER, DIST_FOLDER_LIB, MAIN_FOLDER, LIB_NAME} = require('./config/constants');
 const {resolveApp, resolveBundleFiles, executeGitCommand} = require('./scripts/utils');
+const minify = require('@node-minify/core');
+const babelMinify = require('@node-minify/babel-minify');
 
 (async () => {
   var type = argv.type || 'prod';
@@ -18,8 +20,8 @@ const {resolveApp, resolveBundleFiles, executeGitCommand} = require('./scripts/u
 
   // Удаляем каталог, если такой уже есть
   if (distFolder === DIST_FOLDER) {
-    fs.removeSync(resolveApp(distFolder));
-    console.info(`1. Удаляем каталог ${distFolder}`);
+    fs.removeSync(resolveApp(ROOT_FOLDER));
+    console.info(`1. Удаляем каталог ${ROOT_FOLDER}`);
   }
 
   // Получаем текущую GIT-овую ветку
@@ -39,6 +41,20 @@ const {resolveApp, resolveBundleFiles, executeGitCommand} = require('./scripts/u
       fs.copySync(resolveApp(dirPath), resolveApp(distFolder, DIST_FOLDER_LIB, name));
     }
   }
+
+  // Получаем все входные файлы для babelMinify из src
+  const entryJsFiles = await resolveBundleFiles(`${MAIN_FOLDER}`, {
+    fileMask: /\.js$/
+  });
+
+  var promise = minify({
+    compressor: babelMinify,
+    input: entryJsFiles,
+    output: resolveApp(distFolder, LIB_NAME),
+    callback: function(err, min) {
+
+    }
+  });
 
   // Запишем файл версионирования
   console.info(` `);
