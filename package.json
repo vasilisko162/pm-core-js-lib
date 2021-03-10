@@ -1,0 +1,45 @@
+{
+  "name": "pm-core-js-lib",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "clear": "node ./.development/clear.js",
+    "build": "node ./.development/build.js",
+    "build-in-js-folder": "node ./.development/build.js --dir=js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasilisko162/pm-core-js-lib.git"
+  },
+  "keywords": [
+    "pmCore",
+    "JS"
+  ],
+  "author": "Vasiliy Ivanov",
+  "license": "SEE LICENSE IN LICENSE file",
+  "bugs": {
+    "url": "https://github.com/vasilisko162/pm-core-js-lib/issues"
+  },
+  "homepage": "https://github.com/vasilisko162/pm-core-js-lib#readme",
+  "private": true,
+  "dependencies": {
+    "cheerio": "1.0.0-rc.3",
+    "date-and-time": "0.6.2",
+    "fs-extra": "8.1.0",
+    "klaw-sync": "6.0.0",
+    "shelljs": "0.8.4",
+    "yargs": "11.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.0.3",
+    "express": "4.17.1",
+    "express-mung": "0.5.1",
+    "mocker-api": "1.9.0",
+    "prettier": "1.19.1",
+    "webpack-dev-middleware": "3.7.2"
+  }
+}
