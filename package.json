@@ -1,10 +1,10 @@
 {
   "name": "@vasilisko/perfect-mind-core-js-lib",
   "version": "1.1.1",
-  "description": "",
+  "description": "## Установка",
   "main": "index.js",
   "directories": {
-    "example": "examples"
+    "test": "test"
   },
   "scripts": {
     "clear": "node ./.development/clear.js",
@@ -25,7 +25,6 @@
     "url": "https://github.com/vasilisko162/pm-core-js-lib/issues"
   },
   "homepage": "https://github.com/vasilisko162/pm-core-js-lib#readme",
-  "private": true,
   "dependencies": {
     "@babel/core": "7.8.4",
     "@babel/plugin-proposal-class-properties": "7.8.3",
