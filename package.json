@@ -1,6 +1,6 @@
 {
   "name": "@vasilisko/perfect-mind-core-js-lib",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": {
     "name": "Vasiliy Ivanov",
     "email": "vasilisko@gmail.com",
@@ -15,6 +15,7 @@
     "src": "./src"
   },
   "scripts": {
+    "preinstall": "node lib/preinstall.js",
     "clear": "node lib/clear.js",
     "build": "node lib/build.js --type=local",
     "build-in-js-folder": "node lib/build.js --type=local --dir=js/"
@@ -50,7 +51,8 @@
     "cheerio": "1.0.0-rc.3",
     "date-and-time": "0.6.2",
     "fs-extra": "8.1.0",
-    "jquery": "3.6.0",
+    "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
     "klaw-sync": "6.0.0",
     "node-minify": "3.6.0",
     "node-sass": "5.0.0",
