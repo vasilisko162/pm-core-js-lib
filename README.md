@@ -1,24 +1,25 @@
 # pm-core-js-lib
+JS script library to work with Frontend
 
-## Установка
+## Installation
 
-_Должны быть установлены [Node.js](https://nodejs.org/) и [npm](https://npmjs.com/)._
+Must have [Node.js](https://nodejs.org/) and [npm](https://npmjs.com/) installed.
 
 ```sh
 npm install
 ```
 
-## Команды
+## CLI
 
-### Выгрузка библиотеки pmCore в каталог ./js
+Unload the pmCore library into the ./js directory
 
 ```sh
-npm run build-in-js-folder
+pmcore-js 
 ```
 
-### Выгрузка библиотеки pmCore в ваш каталог
-Необходимо указать ключ `dir`: `--dir=folder-name`
+Unload the pmCore library into your directory.
+You have to specify the `dir` key: `--dir=folder-name`
 
 ```sh
-npm run build --dir=js-code
+pmcore-js build --dir=js
 ```

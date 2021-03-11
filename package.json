@@ -1,15 +1,24 @@
 {
   "name": "@vasilisko/perfect-mind-core-js-lib",
-  "version": "1.1.1",
-  "description": "## Установка",
+  "version": "1.1.2",
+  "author": {
+    "name": "Vasiliy Ivanov",
+    "email": "vasilisko@gmail.com",
+    "url": "http://perfectmind.ru/"
+  },
+  "description": "JS script library to work with Frontend",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "example"
   },
   "scripts": {
-    "clear": "node ./.development/clear.js",
-    "build": "node ./.development/build.js",
-    "build-in-js-folder": "node ./.development/build.js --dir=js"
+    "clear": "node lib/clear.js",
+    "build": "node lib/build.js",
+    "build-in-js-folder": "node lib/build.js --install=true"
+  },
+  "bin": {
+    "pmcore-js": "./bin/install.js --install=true",
+    "pmcore-js-info": "./bin/info.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +26,10 @@
   },
   "keywords": [
     "pmCore",
-    "JS"
+    "pmCoreLib",
+    "pmCoreJsLib"
   ],
-  "author": "Vasiliy Ivanov",
-  "license": "SEE LICENSE IN LICENSE file",
+  "license": "SEE LICENSE IN LICENSE LICENSE",
   "bugs": {
     "url": "https://github.com/vasilisko162/pm-core-js-lib/issues"
   },
