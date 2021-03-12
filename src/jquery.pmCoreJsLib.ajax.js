@@ -113,6 +113,20 @@ var useAjax = (function() {
     /**
      *
      * @param formId
+     * @returns {{action: null}}
+     */
+    ajaxCreateData: function(formId) {
+      var array = $('#' + formId).serializeArray(),
+        data = {action: null};
+      $.each(array, function(k, item) {
+        data[item.name] = item.value;
+      });
+      return data;
+    },
+
+    /**
+     *
+     * @param formId
      * @private
      */
     __ajaxSend__showLoader: function(formId) {
@@ -137,20 +151,6 @@ var useAjax = (function() {
       form.parents('.' + settings.windowClass).find('.' + settings.windowLoaderClass).removeClass('show');
       formBtn.attr('disabled', false);
       formBtn.text(properties.btnText);
-    },
-
-    /**
-     *
-     * @param formId
-     * @returns {{action: null}}
-     */
-    ajaxCreateData: function(formId) {
-      var array = $('#' + formId).serializeArray(),
-        data = {action: null};
-      $.each(array, function(k, item) {
-        data[item.name] = item.value;
-      });
-      return data;
     }
   };
 

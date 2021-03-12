@@ -1,6 +1,6 @@
 {
   "name": "@vasilisko/perfect-mind-core-js-lib",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "author": {
     "name": "Vasiliy Ivanov",
     "email": "vasilisko@gmail.com",
@@ -15,10 +15,11 @@
     "src": "./src"
   },
   "scripts": {
-    "preinstall": "node lib/preinstall.js",
+    "postinstall": "node lib/postinstall.js",
     "clear": "node lib/clear.js",
     "build": "node lib/build.js --type=local",
-    "build-in-js-folder": "node lib/build.js --type=local --dir=js/"
+    "build-in-js-folder": "node lib/build.js --type=local --dir=js/",
+    "publish-lib": "npm publish"
   },
   "bin": {
     "pmcore-js": "bin/install.js",
