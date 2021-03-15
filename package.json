@@ -1,25 +1,15 @@
 {
   "name": "@vasilisko/perfect-mind-core-js-lib",
   "version": "1.1.8",
-  "author": {
-    "name": "Vasiliy Ivanov",
-    "email": "vasilisko@gmail.com",
-    "url": "http://perfectmind.ru/"
-  },
+  "author": "Vasiliy Ivanov <vasilisko@gmail.com> (http://perfectmind.ru/)",
   "description": "JS script library to work with Frontend",
   "main": "index.js",
   "directories": {
-    "bin": "./bin",
-    "example": "./example",
-    "lib": "./lib",
-    "src": "./src"
+    "example": "example"
   },
   "scripts": {
-    "postinstall": "node lib/postinstall.js",
-    "clear": "node lib/clear.js",
-    "build": "node lib/build.js --type=local",
-    "build-in-js-folder": "node lib/build.js --type=local --dir=js/",
-    "publish-lib": "npm publish"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config=webpack.config.js"
   },
   "bin": {
     "pmcore-js": "bin/install.js",
@@ -29,6 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/vasilisko162/pm-core-js-lib.git"
   },
+  "private": true,
   "keywords": [
     "pmCore",
     "pmCoreLib",
@@ -40,36 +31,10 @@
   },
   "homepage": "https://github.com/vasilisko162/pm-core-js-lib#readme",
   "dependencies": {
-    "@babel/core": "7.8.4",
-    "@babel/plugin-proposal-class-properties": "7.8.3",
-    "@babel/plugin-transform-runtime": "7.8.3",
-    "@babel/polyfill": "7.8.3",
-    "@babel/preset-env": "7.9.0",
-    "@babel/runtime": "7.8.4",
-    "@node-minify/babel-minify": "6.2.0",
-    "@node-minify/core": "6.2.0",
-    "babel-minify": "^0.5.1",
-    "cheerio": "1.0.0-rc.3",
-    "date-and-time": "0.6.2",
-    "fs-extra": "8.1.0",
-    "jquery": "^3.6.0",
-    "jquery-ui": "^1.12.1",
-    "klaw-sync": "6.0.0",
-    "node-minify": "3.6.0",
-    "node-sass": "5.0.0",
-    "postcss": "8.2.8",
-    "shelljs": "0.8.4",
-    "source-map": "^0.7.3",
-    "terser-webpack-plugin": "5.1.1",
-    "webpack": "4.41.5",
-    "yargs": "11.0.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "babel-eslint": "10.0.3",
-    "express": "4.17.1",
-    "express-mung": "0.5.1",
-    "mocker-api": "1.9.0",
-    "prettier": "1.19.1",
-    "webpack-dev-middleware": "3.7.2"
+    "webpack": "^5.25.1",
+    "webpack-cli": "^4.5.0"
   }
 }
